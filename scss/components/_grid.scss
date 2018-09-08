@@ -1,0 +1,199 @@
+/* ======================================
+    Grid Styles
+   ====================================== */
+.grid {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  grid-template-areas:
+    "header header"
+    "nav main";
+  @include mq("xs") {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main";
+  }
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px 1fr;
+  // grid-auto-columns: 1fr;
+  // grid-auto-rows: 50px;
+  grid-template-areas:
+    "topper topper"
+    "alert alert"
+    "widgets widgets";
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+// Topper Section
+
+.topper {
+  grid-area: topper;
+  display: grid;
+  grid-template-areas:
+    "db-heading search";
+  grid-template-rows: 100px;
+
+  @include mq("xs") {
+    grid-template-columns: 40% 60%;
+  }
+
+  @include mq("sm") {
+    grid-template-columns: 40% 60%;
+  }
+
+  @include mq("med") {
+    grid-template-columns: 20% 80%;
+  }
+
+
+}
+
+.db-heading {
+  grid-area: db-heading;
+  border-right: $border-line;
+
+  & h1 {
+    @include center;
+  }
+
+}
+
+.search {
+  background-color: $background-color;
+  border-bottom: $border-line;
+  display: flex;
+  flex-direction: row;
+  padding: 0.75em;
+}
+
+#search {
+  grid-area: search;
+  border: $border-line;
+  border-radius: 5px;
+  font-size: 1.25em;
+  margin-left: auto;
+  margin-right: 1em;
+  padding: 0.5em;
+
+  @include mq("xs") {
+    width: 90%;
+  }
+
+  @include mq("sm") {
+    width: 90%;
+  }
+
+  @include mq("med") {
+    width: 40%;
+  }
+
+  &:hover {
+    border-color: $color-secondary;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $color-primary;
+  }
+}
+
+// Notifications Section
+#userAlerts {
+  grid-area: alert;
+}
+
+.confirmation {
+  grid-area: confirmation;
+}
+
+// Widgets Section
+
+.widgets {
+  grid-area: widgets;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto; //To be modified for widget sizes
+
+    @include mq("xs") {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "traffic"
+        "daily-traffic"
+        "mobile-users"
+        "social-stats"
+        "new-members"
+        "recent-activity"
+        "message-user"
+        "settings";
+    }
+
+    @include mq("sm") {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "traffic"
+        "daily-traffic"
+        "mobile-users"
+        "social-stats"
+        "new-members"
+        "recent-activity"
+        "message-user"
+        "settings";
+    }
+
+    @include mq("med") {
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "social-stats social-stats"
+        "new-members recent-activity"
+        "message-user settings";
+    }
+}
+
+.traffic {
+  grid-area: traffic;
+}
+
+.daily-traffic {
+  grid-area: daily-traffic;
+}
+
+.mobile-users {
+  grid-area: mobile-users;
+}
+
+.social-stats {
+  grid-area: social-stats;
+}
+
+.new-members {
+  grid-area: new-members;
+}
+
+.recent-activity {
+  grid-area: recent-activity;
+}
+
+.message-user {
+  grid-area: message-user;
+}
+
+.settings {
+  grid-area: settings;
+}

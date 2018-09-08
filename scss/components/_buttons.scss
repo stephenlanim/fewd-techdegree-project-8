@@ -1,0 +1,39 @@
+/* ======================================
+    Buttons Styles
+   ====================================== */
+
+button {
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+  text-transform: uppercase;
+  @include transition($dur: 0.2s);
+
+  .message-user & {
+    width: 100%;
+  }
+
+  .settings & {
+    width: 40%;
+  }
+}
+
+.submit-btn {
+  background-color: $btn-color-default;
+
+  &:hover,
+  &:focus {
+    background-color: darken($btn-color-default, 20);
+  }
+}
+
+.cancel-btn {
+  background-color: $btn-color-cancel;
+
+  &:hover,
+  &:focus {
+    background-color: darken($btn-color-cancel, 20);
+  }
+}
