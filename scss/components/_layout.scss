@@ -1,0 +1,41 @@
+/* ======================================
+    Grid Styles
+   ====================================== */
+.container {
+  background-color: $color-primary;
+  min-height: 100vh;
+}
+
+.grid {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "directory";
+  @include center;
+  width: 90vw;
+
+}
+
+
+.header {
+  grid-area: header;
+  margin-top: 1em;
+  padding: 1rem;
+  // @include center;
+
+  @include mq('med'){
+    @include flexbox($just: space-between);
+  }
+
+}
+
+.directory {
+  grid-area: directory;
+  padding: 1rem;
+
+  @include mq ('med') {
+    @include flexbox($wrap: wrap, $just: space-between);
+  }
+}

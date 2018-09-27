@@ -2,126 +2,52 @@
     Header Styles
    ====================================== */
 
-.header {
-  background-color: $color-primary;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  z-index: 10000;
-  @include flexbox($dir:row);
-  align-items: center;
-  overflow: visible;
-}
+   .company,
+   .filter {
+     @include center;
+     text-align: center;
 
-.app-name {
-  @include flexbox($dir:row);
-  align-items: center;
-  color: #fff;
-  font-size: 2em;
-  margin: 1em;
-  @include mq('xs') {
-    font-size: 1.5em;
-    margin-right: 0;
-  }
-}
+     @include mq("med") {
+       margin: 0.5em;
+       text-align: left;
+     }
+   }
 
-.app-login {
-  @include flexbox($dir:row);
-  align-items: center;
-  color: #fff;
-  font-size: 2em;
-  padding: 1em;
-  margin-left: auto;
 
-  @include mq('xs') {
-    font-size: 1.5em;
-  }
-}
+   .filter {
+     // background-color: $background-color;
+     // border-bottom: $border-line;
+     display: flex;
+     flex-direction: row;
+     padding: 0.75em;
 
-.notifications {
-  margin-right: 1em;
-  position: relative;
-}
+     @include mq("xs") {
+       width: 90%;
+     }
 
-.bell {
-  cursor: pointer;
-  fill: #fff;
+     @include mq("sm") {
+       width: 90%;
+     }
 
-  &:hover,
-  &:focus {
-    animation-name: shake;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-  }
-}
+     @include mq("med") {
+       width: 40%;
+     }
+   }
 
-// New-notification indicator dot
-.new-notif {
-  content: '';
-  background-color: $color-secondary;
-  border: 2px solid $color-secondary;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
+   #filter {
+     grid-area: search;
+     border: $border-line;
+     border-radius: 5px;
+     font-size: 1.25em;
+     padding: 0.5em;
+     width: 100%;
 
-  position: absolute;
-  top: 0;
-  right: 0;
-}
+     &:hover {
+       border-color: $color-secondary;
+     }
 
-// Notification list under alert bell
-ul#notifList {
-  border-radius: 5px;
-  @include shadow;
-  display: none;
-  position: absolute;
-  top: 25px;
-  right: 0;
-
-  width: 300px;
-  height: auto;
-  overflow: auto;
-
-  &:hover {
-    display: block;
-  }
-
-  @include mq('xs') {
-    top: 30px;
-    right: -100px;
-  }
-
-  & li {
-    background-color: $background-color;
-    border-bottom: $border-line;
-    color: $text-color;
-    cursor: pointer;
-    font-size: 1.25rem;
-    list-style: none;
-    padding: 1em;
-    @include transition;
-    &:last-child {
-      border-bottom: none;
-    }
-
-    &:hover,
-    &focus {
-      background-color: darken($background-color, 20);
-    }
-  }
-}
-
-.avatar-div {
-  border-left: 2px solid $color-accent;
-  padding-left: 1em;
-}
-
-.avatar {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.user-name {
-  margin-left: 0.5em;
-}
+     &:focus,
+     &:active {
+       border-color: $color-primary;
+     }
+   }

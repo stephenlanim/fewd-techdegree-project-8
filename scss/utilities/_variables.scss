@@ -11,12 +11,13 @@ $breakpoints: (
   "sm": 600px, // tablet portrait
   "med": 900px, // tablet landscape
   "lg": 1200px, // desktop
+  "xl": 2100px // large desktop
 );
 
 // Colors
 $text-color: #555;
-$color-primary: #7477bf;
-$color-secondary: #81c98f;
+$color-primary: #74b1bf;
+$color-secondary: lighten($color-primary, 20);
 $color-tertiary: #74b1bf;
 $color-accent: #4d4c72;
 $success-color: #81c98f;
@@ -25,7 +26,8 @@ $warning-color: #74b1bf;
 $nav-icon-color: #a6a6b9;
 $link-color-active: #85db80;
 $background-color: #fbfbfb;
-$border-color: darken($background-color, 20);
+// $border-color: darken($background-color, 20);
+$border-color: darken($color-primary, 20);
 $btn-color-default: #7377bf;
 $btn-color-cancel: #b2b2b2;
 $form-color: lighten($border-color, 20);

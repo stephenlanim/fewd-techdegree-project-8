@@ -2,32 +2,58 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Employee Directory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Employee Directory</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <div class="grid">
+    <div class="container">
+      <div class="grid">
 
-      <header class="header">
-        <div class="company">
-          <h1>Sage Learning Technologies Employee Directory</h1>
-        </div>
+        <header class="header">
+          <div class="company">
+            <h1>Sage Learning Technologies Employee Directory</h1>
+          </div>
 
-        <div class="filter">
-          <input id="filter" type="search" name="employee_filter" placeholder="Enter a name or username">
-        </div>
+          <div class="filter">
+            <input id="filter" type="search" name="employee_filter" placeholder="Enter a name or username">
+          </div>
 
-      </header> <!-- /.header -->
+        </header> <!-- /.header -->
 
-      <main class="directory">
+        <main class="directory">
 
+          <!-- Example directory Card -->
+          <div class="directory-card modal-trigger">
+            <img src="" alt="" class="avatar">
+            <div class="d-card-info">
+              <h2 class="name">Employee Name</h2>
+              <a href="" class="email">person@example.com</a>
+              <p class="city">The City</p>
+            </div> <!-- /.d-card-info -->
+          </div>
 
+          <!-- Entire Modal Overlay (w/ transparent background) -->
+          <div class="modal-overlay">
 
+            <!-- Container Housing Modal Content (white background) -->
+            <div class="modal-content-window">
 
-      </main> <!-- /.dashboard -->
-      </div>
+              <!-- Header section for modal content -->
+              <div class="modal-header">
+                <!-- Close Button -->
+                <button class="close-btn">&#10006; Close</button>
+                <!-- Modal Title -->
+                <h2 class="modal-title">[Project Title]</h2>
+              </div>
+
+            </div> <!-- End of .modal-content-window -->
+          </div> <!-- End of .modal-overlay -->
+
+        </main> <!-- /.directory -->
+      </div> <!-- /.grid -->
+    </div> <!-- /.container -->
 
     <!-- ==============================
      Scripts
@@ -39,8 +65,8 @@
     <!-- Random User Generator API -->
     <script src="js/random-user.js"></script>
 
-    <!-- Modals and Lightbox -->
-    <script src="js/modal-lightbox.js"></script>
+    <!-- Modals and Slideshow -->
+    <script src="js/modal-slideshow.js"></script>
 
     <!-- Filter -->
     <script src="js/filter.js"></script>

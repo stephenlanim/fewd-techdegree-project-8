@@ -1,0 +1,165 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This stylesheet can be used for any page that uses JavaScript modals.
+
+Use this document in conjunction with js-modal.js for the scripts that open and close the modal and stop a video inside the modal from playing.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ======================================
+  Modal Trigger/Object Styles
+========================================= */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  The styles here are just for styling different types of objects used to trigger a modal.
+
+  The funcitonal JavaScript code that allows an object to open a modal is tied to the class of "modal-trigger." This means that any <button>, <a> link, or even a <div> can be used as the modal trigger if it is given that class.
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Regular modal trigger button */
+ .modal-trigger {
+   // @include button;
+   font-size: 1.2rem;
+ }
+
+
+/* ======================================
+  Modal Window Styles
+========================================= */
+
+/* The entire modal overlay including its transparent background. */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+
+}
+
+/* Just the content window within the modal. */
+.modal-content-window {
+  background-color: $color-secondary;
+  border-radius: 5px;
+  margin: 75px auto 10px auto;
+  padding: 1em;
+  width: 90%;
+  max-height: 85vh;
+  overflow: auto;
+  box-shadow:
+    0 5px 8px 0 rgba(0,0,0,0.2),
+    0 7px 20px 0 rgba(0,0,0,0.17) ;
+
+
+  @include mq('sm') {
+    width: 70%;
+    max-height: 80vh;
+  }
+
+  @include mq('med') {
+    margin-top: 120px;
+    width: 60%;
+  }
+
+  @include mq('lg') {
+    width: 50%;
+  }
+
+
+  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
+  animation-name:modalopen; /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
+  animation-duration:0.75s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* === .modal-content-window animation === */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)}
+}
+
+/* The container housing the modal-title and close button. */
+.modal-header {
+  @include flexbox($dir:row, $just:space-between);
+  align-items: flex-start;
+
+  @include mq('sm') {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* The title in the modal content window. */
+.modal-title {
+  color: $color-secondary;
+  font-size: 2.0em;
+  margin: 0 !important;
+  width: 100%;
+
+  @include mq('sm') {
+    order: 0;
+    width: 80%;
+  }
+}
+
+/* The close button within the modal content window. */
+.close-btn {
+  // @include button;
+
+  font-size: 1.4em;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  margin: 0;
+  padding: 0 !important;
+  // align-self: flex-end;
+  width: 64px;
+  height: 64px;
+
+  order: 1;
+
+  @include mq('sm') {
+    order: 1;
+  }
+}
+
+/* ======================================
+  Modal Window Add-On Classes
+========================================= */
+
+.w-auto {
+  width: auto;
+}
+
+.w-90prcnt {
+  width: 90%;
+}
+
+.w-98prcnt {
+  width: 98%;
+}
+
+.h-80prcnt {
+  height: 80%;
+}
+
+.h-90prcnt {
+  height: 90%;
+}
+
+.h-98prcnt {
+  height: 98%;
+}
+
+.h-auto {
+  height: auto;
+}

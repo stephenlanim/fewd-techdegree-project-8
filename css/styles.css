@@ -1,0 +1,693 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,300i,400,400i,600,600i,700,700i");
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/* ======================================
+    Base Styles
+   ====================================== */
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5; }
+
+/* ======================================
+    Grid Styles
+   ====================================== */
+.container {
+  background-color: #74b1bf;
+  min-height: 100vh; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "directory";
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw; }
+
+.header {
+  grid-area: header;
+  margin-top: 1em;
+  padding: 1rem; }
+  @media (min-width: 900px) {
+    .header {
+      display: flex;
+      justify-content: space-between; } }
+
+.directory {
+  grid-area: directory;
+  padding: 1rem; }
+  @media (min-width: 900px) {
+    .directory {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
+
+/* ======================================
+    Header Styles
+   ====================================== */
+.company,
+.filter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  @media (min-width: 900px) {
+    .company,
+    .filter {
+      margin: 0.5em;
+      text-align: left; } }
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  padding: 0.75em; }
+  @media (max-width: 599px) {
+    .filter {
+      width: 90%; } }
+  @media (min-width: 600px) {
+    .filter {
+      width: 90%; } }
+  @media (min-width: 900px) {
+    .filter {
+      width: 40%; } }
+
+#filter {
+  grid-area: search;
+  border: 2px solid #417e8c;
+  border-radius: 5px;
+  font-size: 1.25em;
+  padding: 0.5em;
+  width: 100%; }
+  #filter:hover {
+    border-color: #bad8df; }
+  #filter:focus, #filter:active {
+    border-color: #74b1bf; }
+
+/* ======================================
+    Animations
+   ====================================== */
+/* Animation for shaking a chosen letter */
+@keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  10% {
+    transform: rotate(10deg); }
+  20% {
+    transform: rotate(-10deg); }
+  30% {
+    transform: rotate(10deg); }
+  40% {
+    transform: rotate(-10deg); }
+  50% {
+    transform: rotate(10deg); }
+  60% {
+    transform: rotate(-10deg); }
+  70% {
+    transform: rotate(10deg); }
+  80% {
+    transform: rotate(-10deg); }
+  90% {
+    transform: rotate(10deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+/* ======================================
+    Directory Card Styles
+   ====================================== */
+.directory-card {
+  background-color: #bad8df;
+  border-radius: 10px;
+  border: 2px solid #417e8c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  margin: 0.5em;
+  padding: 1em;
+  width: 96%; }
+  @media (min-width: 900px) {
+    .directory-card {
+      width: 48%; } }
+  @media (min-width: 1200px) {
+    .directory-card {
+      width: 30%; } }
+
+.avatar {
+  border-radius: 50%;
+  width: 35%; }
+
+.d-card-info {
+  width: 60%; }
+
+.directory h4 {
+  font-size: 28px;
+  margin: 0.25em 0; }
+  @media (min-width: 600px) {
+    .directory h4 {
+      font-size: 32px; } }
+
+.directory p {
+  margin: 0 0 0.5em 0; }
+
+.client-projects > h3,
+.practice-projects > h3 {
+  font-size: 1.8em;
+  margin-bottom: 1em; }
+
+.project-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch; }
+
+.project-card {
+  background-color: #bad8df;
+  border-radius: 5px;
+  color: #555;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 10px 0px rgba(46, 61, 73, 0.2), -2px 0px 10px 0px rgba(46, 61, 73, 0.2); }
+  @media (min-width: 900px) {
+    .project-card {
+      width: 45%; } }
+  @media (min-width: 1200px) {
+    .project-card {
+      width: 30%; } }
+  @media (min-width: 2100px) {
+    .project-card {
+      width: 22%; } }
+
+.project-thumb ~ h4 {
+  text-align: center; }
+
+.project-thumb a {
+  display: block;
+  padding: 1em;
+  margin: 0;
+  text-align: center; }
+
+.project-thumb i {
+  font-size: 8em;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5); }
+  .project-thumb i:hover, .project-thumb ifocus {
+    transform: scale(1.2); }
+
+.modal-content-window .view-btn {
+  font-size: 1.2em;
+  display: inline-block;
+  margin: 0.2em 0; }
+
+.view-btns-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 900px) {
+    .view-btns-div {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between; } }
+
+.view-external-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 900px) {
+    .view-external-links {
+      display: block;
+      width: 70%; } }
+
+/* List of project details within modal */
+ul.project-info {
+  padding: 0; }
+  ul.project-info li {
+    font-size: 1.3em;
+    margin-bottom: 0.5em; }
+  ul.project-info li > ul > li {
+    font-size: 1.1rem; }
+  ul.project-info .skill-tags {
+    margin-left: 0.5em; }
+  ul.project-info .skill-tags,
+  ul.project-info .skill-tags li {
+    display: inline-block; }
+  ul.project-info .skill-tags li {
+    border-radius: 6px;
+    background: #74b1bf;
+    padding: 5px 10px;
+    margin: 2px; }
+  ul.project-info .skill-tags li:nth-child(even) {
+    background: #4d4c72; }
+
+/* === Accordion Triggers and Content === */
+.project-tasks li {
+  font-size: 22px;
+  line-height: 1.3;
+  list-style: disc;
+  list-style-position: outside;
+  margin-left: 2em; }
+
+.project-summary p,
+.project-results p {
+  font-size: 22px;
+  line-height: 1.4;
+  padding: 0 0.5em; }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This stylesheet can be used for any page that uses JavaScript modals.
+
+Use this document in conjunction with js-modal.js for the scripts that open and close the modal and stop a video inside the modal from playing.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ======================================
+  Modal Trigger/Object Styles
+========================================= */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  The styles here are just for styling different types of objects used to trigger a modal.
+
+  The funcitonal JavaScript code that allows an object to open a modal is tied to the class of "modal-trigger." This means that any <button>, <a> link, or even a <div> can be used as the modal trigger if it is given that class.
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Regular modal trigger button */
+.modal-trigger {
+  font-size: 1.2rem; }
+
+/* ======================================
+  Modal Window Styles
+========================================= */
+/* The entire modal overlay including its transparent background. */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+/* Just the content window within the modal. */
+.modal-content-window {
+  background-color: #bad8df;
+  border-radius: 5px;
+  margin: 75px auto 10px auto;
+  padding: 1em;
+  width: 90%;
+  max-height: 85vh;
+  overflow: auto;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
+  animation-name: modalopen;
+  /* This assigns the @keyframes animation with the name "modalopen" (shown below) to .modal-content-window. */
+  animation-duration: 0.75s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  @media (min-width: 600px) {
+    .modal-content-window {
+      width: 70%;
+      max-height: 80vh; } }
+  @media (min-width: 900px) {
+    .modal-content-window {
+      margin-top: 120px;
+      width: 60%; } }
+  @media (min-width: 1200px) {
+    .modal-content-window {
+      width: 50%; } }
+
+/* === .modal-content-window animation === */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: scale(0.5); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+/* The container housing the modal-title and close button. */
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; }
+  @media (min-width: 600px) {
+    .modal-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; } }
+
+/* The title in the modal content window. */
+.modal-title {
+  color: #bad8df;
+  font-size: 2.0em;
+  margin: 0 !important;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .modal-title {
+      order: 0;
+      width: 80%; } }
+
+/* The close button within the modal content window. */
+.close-btn {
+  font-size: 1.4em;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  margin: 0;
+  padding: 0 !important;
+  width: 64px;
+  height: 64px;
+  order: 1; }
+  @media (min-width: 600px) {
+    .close-btn {
+      order: 1; } }
+
+/* ======================================
+  Modal Window Add-On Classes
+========================================= */
+.w-auto {
+  width: auto; }
+
+.w-90prcnt {
+  width: 90%; }
+
+.w-98prcnt {
+  width: 98%; }
+
+.h-80prcnt {
+  height: 80%; }
+
+.h-90prcnt {
+  height: 90%; }
+
+.h-98prcnt {
+  height: 98%; }
+
+.h-auto {
+  height: auto; }
+
+/*# sourceMappingURL=styles.css.map */
