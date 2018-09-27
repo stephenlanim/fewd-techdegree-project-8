@@ -45,7 +45,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 .modal-content-window {
   background-color: $color-secondary;
   border-radius: 8px;
-  margin: 75px auto 10px auto;
+  margin: 50px auto 10px auto;
   padding: 1em;
   // width: 90%;
   max-height: 85vh;
@@ -61,7 +61,8 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   }
 
   @include mq('med') {
-    margin-top: 120px;
+    // margin-top: 120px;
+    margin-top: 80px;
     // width: 60%;
   }
 
@@ -125,7 +126,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 /* The close button within the modal content window. */
 .close-btn {
   @include button;
-  
+
   align-self: flex-end;
   background-color: inherit;
   border-radius: 8px;

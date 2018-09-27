@@ -25,6 +25,7 @@ let $dcImage;
 let $dcName;
 let $dcEmail;
 let $dcCity;
+let $dcUsername;
 
 // Get modal-card targets
 let $mcImage;
@@ -44,6 +45,7 @@ let sourcePhone;
 let parsedPhone;
 let sourceAddress;
 let sourceBirthday;
+let sourceUsername;
 
 // Fetch JSON data for 12 users from Random User API
 fetchData('https://randomuser.me/api/?results=3&nat=us')
@@ -69,12 +71,14 @@ fetchData('https://randomuser.me/api/?results=3&nat=us')
       parsedPhone = `tel:+1${parsePhoneNumber(user.phone)}`;
       sourceAddress = `${user.location.street}, ${user.location.city}, ${user.location.state} ${user.location.postcode}`;
       sourceBirthday = formatBirthday(user.dob.date);
+      sourceUsername = user.login.username;
 
       // Get directory-card targets
       $dcImage = $('.directory-card .photo').eq(currentUser);
       $dcName = $('.directory-card .name').eq(currentUser);
       $dcEmail = $('.directory-card .email').eq(currentUser);
       $dcCity = $('.directory-card .city').eq(currentUser);
+      $dcUsername = $('.directory-card .username').eq(currentUser);
 
       // Get modal-card targets
       $mcImage = $('.modal-card .photo').eq(currentUser);
@@ -84,8 +88,6 @@ fetchData('https://randomuser.me/api/?results=3&nat=us')
       $mcPhone = $('.modal-card .phone').eq(currentUser);
       $mcAddress = $('.modal-card .address').eq(currentUser);
       $mcBirthday = $('.modal-card .birthday').eq(currentUser);
-
-      console.log(data.results);
 
       insertRandomUsers(user);
     }); // end of map()
@@ -107,12 +109,18 @@ function insertRandomUsers(user) {
 
   //For each random user... (may use map())
   // data.map( user => {
+  insertUsername();
   insertBasicInfo($dcImage, $dcName, $dcEmail, $dcCity);
   insertModalInfo();
 
 
   // });
 
+}
+
+// Function to insert employee username
+function insertUsername() {
+  $dcUsername.text(`${sourceUsername}`);
 }
 
 

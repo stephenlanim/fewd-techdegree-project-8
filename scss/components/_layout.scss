@@ -14,7 +14,7 @@
     "header"
     "directory";
   @include center;
-  width: 90vw;
+  width: 94vw;
 
 }
 
@@ -37,5 +37,6 @@
 
   @include mq ('med') {
     @include flexbox($wrap: wrap, $just: space-between);
+    align-items: stretch;
   }
 }
