@@ -3,23 +3,39 @@
    ====================================== */
 // $(document).ready(function () {
 
+// // Get directory-card targets
+// const $dcImage = $('.directory-card .photo').eq(user);
+// const $dcName = $('.directory-card .name').index(user);
+// const $dcEmail = $('.directory-card .email').index(user);
+// const $dcCity = $('.directory-card .city').index(user);
+//
+// // Get modal-card targets
+// const $mcImage = $('.modal-card .photo').index(user);
+// const $mcName = $('.modal-card .name').index(user);
+// const $mcEmail = $('.modal-card .email').index(user);
+// const $mcCity = $('.modal-card .city').index(user);
+// const $mcPhone = $('.modal-card .phone').index(user);
+// const $mcAddress = $('.modal-card .address').index(user);
+// const $mcBirthday = $('.modal-card .birthday').index(user);
+
+// Note: Initializing variables inside of any functions only made them accessible to that function and not any nested functions, despitethe fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
+
 // Get directory-card targets
-const $dcImage = $('.directory-card .photo');
-const $dcName = $('.directory-card .name');
-const $dcEmail = $('.directory-card .email');
-const $dcCity = $('.directory-card .city');
+let $dcImage;
+let $dcName;
+let $dcEmail;
+let $dcCity;
 
 // Get modal-card targets
-const $mcImage = $('.modal-card .photo');
-const $mcName = $('.modal-card .name');
-const $mcEmail = $('.modal-card .email');
-const $mcCity = $('.modal-card .city');
-const $mcPhone = $('.modal-card .phone');
-const $mcAddress = $('.modal-card .address');
-const $mcBirthday = $('.modal-card .birthday');
+let $mcImage;
+let $mcName;
+let $mcEmail;
+let $mcCity;
+let $mcPhone;
+let $mcAddress;
+let $mcBirthday;
 
 // Initialize variables for Fetch data properties
-  // Note: Initializing them inside of any functions only made them accessible to that function and not any nested functions, despitethe fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
 let sourceImage;
 let sourceName;
 let sourceEmail;
@@ -30,7 +46,7 @@ let sourceAddress;
 let sourceBirthday;
 
 // Fetch JSON data for 12 users from Random User API
-fetchData('https://randomuser.me/api/?results=1&nat=us')
+fetchData('https://randomuser.me/api/?results=3&nat=us')
 //
   .then(data => {
 
@@ -44,6 +60,7 @@ fetchData('https://randomuser.me/api/?results=1&nat=us')
     // insertRandomUsers(data);
     data.results.map( user => {
       // Get properties from user JSON Object
+      currentUser = data.results.indexOf(user);
       sourceImage = `${user.picture.large}`;
       sourceName = `${user.name.first} ${user.name.last}`;
       sourceEmail = user.email;
@@ -53,16 +70,31 @@ fetchData('https://randomuser.me/api/?results=1&nat=us')
       sourceAddress = `${user.location.street}, ${user.location.city}, ${user.location.state} ${user.location.postcode}`;
       sourceBirthday = formatBirthday(user.dob.date);
 
-      insertRandomUsers();
-    }
+      // Get directory-card targets
+      $dcImage = $('.directory-card .photo').eq(currentUser);
+      $dcName = $('.directory-card .name').eq(currentUser);
+      $dcEmail = $('.directory-card .email').eq(currentUser);
+      $dcCity = $('.directory-card .city').eq(currentUser);
 
-    );
-  });
+      // Get modal-card targets
+      $mcImage = $('.modal-card .photo').eq(currentUser);
+      $mcName = $('.modal-card .name').eq(currentUser);
+      $mcEmail = $('.modal-card .email').eq(currentUser);
+      $mcCity = $('.modal-card .city').eq(currentUser);
+      $mcPhone = $('.modal-card .phone').eq(currentUser);
+      $mcAddress = $('.modal-card .address').eq(currentUser);
+      $mcBirthday = $('.modal-card .birthday').eq(currentUser);
+
+      console.log(data.results);
+
+      insertRandomUsers(user);
+    }); // end of map()
+  }); // end of first then()
 
 // I need to test if JSON data can be passed down to nested functions, since that will let me know if I need to pass variables into nested functions or not. I'm guessing I don't since I've used "this" or e.target in nested functions before.
 
 // Function to insert random user data into directory-cards and modal-cards
-function insertRandomUsers() {
+function insertRandomUsers(user) {
   // Get properties from JSON Object
   // let sourceImage = `${data.picture.large}`;
   // let sourceName = `${data.name.first} ${data.name.last}`;
