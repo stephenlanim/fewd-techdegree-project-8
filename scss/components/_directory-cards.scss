@@ -74,6 +74,16 @@ h2, p, a, address {
   @include center;
 }
 
+// Capitalize Employee Data
+.directory-card,
+.modal-card {
+  text-transform: capitalize;
+}
+
+.email {
+  text-transform: lowercase;
+}
+
 .modal-card-info, .extra-info {
   @include center;
   width: 90%;
