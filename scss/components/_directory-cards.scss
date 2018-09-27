@@ -24,7 +24,9 @@
   background-color: $color-secondary;
   border-radius: 8px;
   border: $border-line;
-  @include flexbox($dir: row, $wrap:no-wrap);
+  @include flexbox($dir: column, $wrap:no-wrap);
+  align-items: center;
+  text-align: center;
 
   // margin: 0.5em;
   padding: 1em;
@@ -33,6 +35,11 @@
   height: 100%;
 
   @include transition;
+
+  @include mq('sm') {
+    text-align: left;
+    flex-direction: row;
+  }
 
   &:hover,
   &:focus {
@@ -52,11 +59,16 @@ h2, p, a, address {
   width: 128px;
   height: 128px;
   margin-right: 0.5rem;
+  // display: none;
 }
 
 .d-card-info {
   padding-right: 0.25em;
-  width: 63%;
+  width: 96%;
+
+  @include mq('sm') {
+    width: 63%;
+  }
 }
 
 .username {

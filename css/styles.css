@@ -337,7 +337,8 @@ a {
 .header {
   grid-area: header;
   margin-top: 1em;
-  padding: 1rem; }
+  padding: 1rem;
+  max-width: 96vw; }
   @media (min-width: 900px) {
     .header {
       display: flex;
@@ -345,10 +346,14 @@ a {
 
 .directory {
   grid-area: directory;
-  padding: 1rem; }
+  padding: 1rem;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   @media (min-width: 900px) {
     .directory {
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: stretch; } }
@@ -443,8 +448,10 @@ a {
   border-radius: 8px;
   border: 2px solid #74b1bf;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: no-wrap;
+  align-items: center;
+  text-align: center;
   padding: 1em;
   padding-left: 0.75em;
   width: 100%;
@@ -452,6 +459,10 @@ a {
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease-in; }
+  @media (min-width: 600px) {
+    .directory-card {
+      text-align: left;
+      flex-direction: row; } }
   .directory-card:hover, .directory-card:focus {
     cursor: pointer;
     background-color: #eef6f7; }
@@ -468,7 +479,10 @@ h2, p, a, address {
 
 .d-card-info {
   padding-right: 0.25em;
-  width: 63%; }
+  width: 96%; }
+  @media (min-width: 600px) {
+    .d-card-info {
+      width: 63%; } }
 
 .username {
   display: none; }

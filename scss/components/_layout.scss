@@ -4,6 +4,7 @@
 .container {
   background-color: $color-primary;
   min-height: 100vh;
+  // min-width: 100%;
 }
 
 .grid {
@@ -23,6 +24,7 @@
   grid-area: header;
   margin-top: 1em;
   padding: 1rem;
+  max-width: 96vw;
   // @include center;
 
   @include mq('med'){
@@ -34,9 +36,16 @@
 .directory {
   grid-area: directory;
   padding: 1rem;
+  max-width: 100vw;
+
+  @include flexbox($dir:column);
+  align-items: center;
 
   @include mq ('med') {
-    @include flexbox($wrap: wrap, $just: space-between);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // @include flexbox($wrap: wrap, $just: space-between);
     align-items: stretch;
   }
 }
