@@ -424,18 +424,18 @@ a {
 /* ======================================
     Directory Card Styles
    ====================================== */
-.user-profile {
+.staff-profile {
   word-wrap: break-word;
   width: 96%;
   margin: 0.5em; }
   @media (min-width: 600px) {
-    .user-profile {
+    .staff-profile {
       width: 75%; } }
   @media (min-width: 900px) {
-    .user-profile {
+    .staff-profile {
       width: 48%; } }
   @media (min-width: 1200px) {
-    .user-profile {
+    .staff-profile {
       width: 31%; } }
 
 .directory-card {

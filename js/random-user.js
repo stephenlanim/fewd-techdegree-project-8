@@ -1,22 +1,22 @@
 /* ======================================
-    Random User Generator API
+    Random staff Generator API
    ====================================== */
 // $(document).ready(function () {
 
 // // Get directory-card targets
-// const $dcImage = $('.directory-card .photo').eq(user);
-// const $dcName = $('.directory-card .name').index(user);
-// const $dcEmail = $('.directory-card .email').index(user);
-// const $dcCity = $('.directory-card .city').index(user);
+// const $dcImage = $('.directory-card .photo').eq(staff);
+// const $dcName = $('.directory-card .name').index(staff);
+// const $dcEmail = $('.directory-card .email').index(staff);
+// const $dcCity = $('.directory-card .city').index(staff);
 //
 // // Get modal-card targets
-// const $mcImage = $('.modal-card .photo').index(user);
-// const $mcName = $('.modal-card .name').index(user);
-// const $mcEmail = $('.modal-card .email').index(user);
-// const $mcCity = $('.modal-card .city').index(user);
-// const $mcPhone = $('.modal-card .phone').index(user);
-// const $mcAddress = $('.modal-card .address').index(user);
-// const $mcBirthday = $('.modal-card .birthday').index(user);
+// const $mcImage = $('.modal-card .photo').index(staff);
+// const $mcName = $('.modal-card .name').index(staff);
+// const $mcEmail = $('.modal-card .email').index(staff);
+// const $mcCity = $('.modal-card .city').index(staff);
+// const $mcPhone = $('.modal-card .phone').index(staff);
+// const $mcAddress = $('.modal-card .address').index(staff);
+// const $mcBirthday = $('.modal-card .birthday').index(staff);
 
 // Note: Initializing variables inside of any functions only made them accessible to that function and not any nested functions, despitethe fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
 
@@ -47,11 +47,10 @@ let sourceAddress;
 let sourceBirthday;
 let sourceUsername;
 
-// Fetch JSON data for 12 users from Random User API
+// Fetch JSON data for 12 staffs from Random staff API
 fetchData('https://randomuser.me/api/?results=3&nat=us')
 //
   .then(data => {
-
 
     // console.log(data);
     console.log(data.results);
@@ -59,44 +58,44 @@ fetchData('https://randomuser.me/api/?results=3&nat=us')
     // console.log(capitalize(data.results[0].name.first));
     // console.log(capitalize(data.results[0].location.street));
     // console.log(data.results[0].email);
-    // insertRandomUsers(data);
-    data.results.map( user => {
-      // Get properties from user JSON Object
-      currentUser = data.results.indexOf(user);
-      sourceImage = `${user.picture.large}`;
-      sourceName = `${user.name.first} ${user.name.last}`;
-      sourceEmail = user.email;
-      sourceCity = user.location.city;
-      sourcePhone = user.phone;
-      parsedPhone = `tel:+1${parsePhoneNumber(user.phone)}`;
-      sourceAddress = `${user.location.street}, ${user.location.city}, ${user.location.state} ${user.location.postcode}`;
-      sourceBirthday = formatBirthday(user.dob.date);
-      sourceUsername = user.login.username;
+    // insertRandomEmployees(data);
+    data.results.map( staff => {
+      // Get properties from staff JSON Object
+      currentStaff = data.results.indexOf(staff);
+      sourceImage = `${staff.picture.large}`;
+      sourceName = `${staff.name.first} ${staff.name.last}`;
+      sourceEmail = staff.email;
+      sourceCity = staff.location.city;
+      sourcePhone = staff.phone;
+      parsedPhone = `tel:+1${parsePhoneNumber(staff.phone)}`;
+      sourceAddress = `${staff.location.street}, ${staff.location.city}, ${staff.location.state} ${staff.location.postcode}`;
+      sourceBirthday = formatBirthday(staff.dob.date);
+      sourceUsername = staff.login.username;
 
       // Get directory-card targets
-      $dcImage = $('.directory-card .photo').eq(currentUser);
-      $dcName = $('.directory-card .name').eq(currentUser);
-      $dcEmail = $('.directory-card .email').eq(currentUser);
-      $dcCity = $('.directory-card .city').eq(currentUser);
-      $dcUsername = $('.directory-card .username').eq(currentUser);
+      $dcImage = $('.directory-card .photo').eq(currentStaff);
+      $dcName = $('.directory-card .name').eq(currentStaff);
+      $dcEmail = $('.directory-card .email').eq(currentStaff);
+      $dcCity = $('.directory-card .city').eq(currentStaff);
+      $dcUsername = $('.directory-card .username').eq(currentStaff);
 
       // Get modal-card targets
-      $mcImage = $('.modal-card .photo').eq(currentUser);
-      $mcName = $('.modal-card .name').eq(currentUser);
-      $mcEmail = $('.modal-card .email').eq(currentUser);
-      $mcCity = $('.modal-card .city').eq(currentUser);
-      $mcPhone = $('.modal-card .phone').eq(currentUser);
-      $mcAddress = $('.modal-card .address').eq(currentUser);
-      $mcBirthday = $('.modal-card .birthday').eq(currentUser);
+      $mcImage = $('.modal-card .photo').eq(currentStaff);
+      $mcName = $('.modal-card .name').eq(currentStaff);
+      $mcEmail = $('.modal-card .email').eq(currentStaff);
+      $mcCity = $('.modal-card .city').eq(currentStaff);
+      $mcPhone = $('.modal-card .phone').eq(currentStaff);
+      $mcAddress = $('.modal-card .address').eq(currentStaff);
+      $mcBirthday = $('.modal-card .birthday').eq(currentStaff);
 
-      insertRandomUsers(user);
+      insertRandomEmployees(staff);
     }); // end of map()
   }); // end of first then()
 
 // I need to test if JSON data can be passed down to nested functions, since that will let me know if I need to pass variables into nested functions or not. I'm guessing I don't since I've used "this" or e.target in nested functions before.
 
-// Function to insert random user data into directory-cards and modal-cards
-function insertRandomUsers(user) {
+// Function to insert random staff data into directory-cards and modal-cards
+function insertRandomEmployees(staff) {
   // Get properties from JSON Object
   // let sourceImage = `${data.picture.large}`;
   // let sourceName = `${data.name.first} ${data.name.last}`;
@@ -107,8 +106,8 @@ function insertRandomUsers(user) {
   // let sourceAddress = `${data.location.street}, ${data.location.city}, ${data.location.state} ${data.location.postcode}`;
   // let sourceBirthday = data.email;
 
-  //For each random user... (may use map())
-  // data.map( user => {
+  //For each random staff... (may use map())
+  // data.map( staff => {
   insertUsername();
   insertBasicInfo($dcImage, $dcName, $dcEmail, $dcCity);
   insertModalInfo();
@@ -186,7 +185,7 @@ function parsePhoneNumber(phoneString) {
   return parsedNumber;
 } // end of parsePhoneNumber
 
-// Function to rearrange numbers for user birthday
+// Function to rearrange numbers for staff birthday
 function formatBirthday(birthday) {
   const year = birthday.substring(0, 4);
   const month = birthday.substring(5, 7);
