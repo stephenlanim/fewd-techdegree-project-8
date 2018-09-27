@@ -14,7 +14,15 @@ ul {
   padding: 0;
 }
 
-p {
+p,
+a,
+address {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+a {
+  // font-size: 1.2rem;
+  color: inherit;
+  text-decoration: none;
 }

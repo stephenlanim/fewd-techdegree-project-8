@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Directory</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- jQuery UI -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <!-- My Styles -->
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -38,15 +42,43 @@
           <div class="modal-overlay">
 
             <!-- Container Housing Modal Content (white background) -->
-            <div class="modal-content-window">
+            <div class="modal-content-window modal-card">
+              <!-- Close Button -->
+              <button class="close-btn">&#10006;</button>
+              <div class="outer-wrapper">
+                <!-- Left Chevron/Previous Button -->
+                <button class="view-btn view-previous" type="button"> <i class="fas fa-chevron-left"></i> </button>
+                <!-- Content Wrapper -->
+                <div class="inner-wrapper">
+                  <!-- Header section for modal content -->
+                  <div class="modal-header">
+                    <!-- Close Button -->
+                    <!-- <button class="close-btn">&#10006;</button> -->
+                    <!-- Modal Title -->
+                    <!-- <h2 class="modal-title name">Employee Name</h2> -->
+                  </div>
+                  <!-- Modal Card Info -->
+                  <div class="modal-card-info">
+                    <h2 class="name">Employee Name</h2>
+                    <a href="" class="email">person@example.com</a>
+                    <p class="city">The City</p>
+                  </div> <!-- /.modal-card-info -->
+                  <!-- Extra Info -->
+                  <div class="extra-info">
+                    <a class="phone" href="tel:+15551234567">5551234567</a>
+                    <address class="address">
+                      1234 Main Street, Raleigh, NC 27607
+                    </address>
+                    <p class="birthday">Birthday: 05/04/82</p>
+                  </div> <!-- /.extra-info -->
+                </div> <!-- /.inner-wrapper -->
 
-              <!-- Header section for modal content -->
-              <div class="modal-header">
-                <!-- Close Button -->
-                <button class="close-btn">&#10006; Close</button>
-                <!-- Modal Title -->
-                <h2 class="modal-title">[Project Title]</h2>
-              </div>
+                <!-- Right Chevron/Next Button -->
+                <button class="view-btn view-next"> <i class="fas fa-chevron-right"></i> </button>
+
+              </div> <!-- /.outer-wrapper -->
+
+
 
             </div> <!-- End of .modal-content-window -->
           </div> <!-- End of .modal-overlay -->
