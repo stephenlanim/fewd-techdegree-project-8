@@ -47,6 +47,16 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
+	"\/js\/fetch-api.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/js\/fetch-api-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/js\/filter.js": {
 		"ft": 64,
 		"ma": 0,
