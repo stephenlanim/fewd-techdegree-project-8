@@ -81,7 +81,8 @@
        // Loop through all modal divs
        for (let i = 0; i < $modalDiv.length; i++) {
          // If the index of the clicked modal trigger matches the current modal div in the loop
-         if ($modalTrigger.index(e.target) === i) {
+         if ($modalTrigger.index(this) === i) {
+           // Note: I used "this" here to induce event bubbling on the entire contents of the directory-card.
 
            // Open the modal corresponding to the clicked trigger
            $modalDiv.eq(i).show();

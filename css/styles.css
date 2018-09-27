@@ -432,7 +432,13 @@ a {
   flex-wrap: no-wrap;
   margin: 0.5em;
   padding: 1em;
-  width: 96%; }
+  width: 96%;
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in; }
+  .directory-card:hover, .directory-card:focus {
+    cursor: pointer;
+    background-color: #eef6f7; }
   @media (min-width: 900px) {
     .directory-card {
       width: 48%; } }
