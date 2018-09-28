@@ -116,6 +116,23 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 //   }
 // }
 
+.outer-wrapper {
+  @include flexbox($just:space-between);
+  align-items: center;
+  @include center;
+
+}
+
+.inner-wrapper {
+  max-width: 65%;
+  padding-top: 0.75em;
+  overflow-y: auto;
+
+  @include mq('sm') {
+    max-width: 80%;
+  }
+}
+
 .view-btn {
   @include button;
   font-size: 1.8em;
@@ -142,8 +159,8 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   margin: 0;
   margin-left: auto;
   position: absolute;
-  top: 5;
-  right: 5;
+  top: 8px;
+  right: 8px;
   // padding: 0 !important;
   // align-self: flex-end;
   // width: 64px;
@@ -156,8 +173,4 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
     border: $border-line;
     // color: lighten($text-color, 5);
   }
-}
-
-.inner-wrapper {
-  max-width: 70%;
 }

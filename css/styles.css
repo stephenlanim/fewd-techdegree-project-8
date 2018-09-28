@@ -509,12 +509,6 @@ h2, p, a, address {
     .modal-card {
       width: 30%; } }
 
-.outer-wrapper {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto; }
-
 .directory-card,
 .modal-card {
   text-transform: capitalize; }
@@ -596,6 +590,21 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 
 /* The container housing the modal-title and close button. */
 /* The title in the modal content window. */
+.outer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.inner-wrapper {
+  max-width: 65%;
+  padding-top: 0.75em;
+  overflow-y: auto; }
+  @media (min-width: 600px) {
+    .inner-wrapper {
+      max-width: 80%; } }
+
 .view-btn {
   background-color: inherit;
   border: 2px solid #74b1bf;
@@ -640,8 +649,8 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   margin: 0;
   margin-left: auto;
   position: absolute;
-  top: 5;
-  right: 5;
+  top: 8px;
+  right: 8px;
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease-in; }
@@ -651,8 +660,5 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
     text-decoration: none; }
   .close-btn:hover, .close-btn:focus {
     border: 2px solid #74b1bf; }
-
-.inner-wrapper {
-  max-width: 70%; }
 
 /*# sourceMappingURL=styles.css.map */

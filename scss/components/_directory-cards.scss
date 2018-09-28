@@ -99,15 +99,6 @@ h2, p, a, address {
     width: 30%;
   }
 
-  & .wrapper {
-    // @include center;
-  }
-}
-
-.outer-wrapper {
-  @include flexbox;
-  align-items: center;
-  @include center;
 }
 
 // Capitalize Employee Data
