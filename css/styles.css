@@ -335,14 +335,7 @@ a {
   width: 94vw; }
 
 .header {
-  grid-area: header;
-  margin-top: 1em;
-  padding: 1rem;
-  max-width: 96vw; }
-  @media (min-width: 900px) {
-    .header {
-      display: flex;
-      justify-content: space-between; } }
+  grid-area: header; }
 
 .directory {
   grid-area: directory;
@@ -361,6 +354,16 @@ a {
 /* ======================================
     Header Styles
    ====================================== */
+.header {
+  margin-top: 1em;
+  padding: 1rem;
+  max-width: 96vw; }
+  @media (min-width: 900px) {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; } }
+
 .company,
 .filter {
   margin-left: auto;
@@ -387,7 +390,6 @@ a {
       width: 40%; } }
 
 #filter {
-  grid-area: search;
   border: 2px solid #74b1bf;
   border-radius: 8px;
   font-size: 1.25em;
@@ -442,6 +444,9 @@ a {
   @media (min-width: 1200px) {
     .staff-profile {
       width: 31%; } }
+  @media (min-width: 2100px) {
+    .staff-profile {
+      width: 23%; } }
 
 .directory-card {
   background-color: #ddecef;
@@ -524,7 +529,8 @@ h2, p, a, address {
 
 .extra-info {
   border-top: 2px solid #74b1bf;
-  padding-top: 1em; }
+  padding-top: 1em;
+  padding-bottom: 0.75em; }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -561,10 +567,11 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 .modal-content-window {
   background-color: #ddecef;
   border-radius: 8px;
-  margin: 50px auto 10px auto;
-  padding: 1em;
-  max-height: 85vh;
+  margin: 40px auto 10px auto;
+  padding: 0.5em;
+  max-height: 90vh;
   overflow: auto;
+  position: relative;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   /* This animation will initiate when a modal-overlay's display property is changed to "display: block" in the openjsModal1() JavaScript function (when the user clicks the #js-modal-trigger object). */
   animation-name: modalopen;
@@ -573,7 +580,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
   @media (min-width: 600px) {
     .modal-content-window {
-      max-height: 80vh; } }
+      max-height: 85vh; } }
   @media (min-width: 900px) {
     .modal-content-window {
       margin-top: 80px; } }
@@ -588,27 +595,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
     transform: scale(1); } }
 
 /* The container housing the modal-title and close button. */
-.modal-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start; }
-  @media (min-width: 600px) {
-    .modal-header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center; } }
-
 /* The title in the modal content window. */
-.modal-title {
-  color: #ddecef;
-  margin: 0 !important;
-  width: 100%; }
-  @media (min-width: 600px) {
-    .modal-title {
-      order: 0;
-      width: 80%; } }
-
 .view-btn {
   background-color: inherit;
   border: 2px solid #74b1bf;
@@ -622,7 +609,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
   font-size: 1.8em;
-  padding: 0.5em; }
+  padding: 0.5em 0.2em; }
   .view-btn:hover, .view-btnfocus {
     border: 2px solid #74b1bf;
     cursor: pointer;
@@ -652,6 +639,9 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   font-size: 1.4em;
   margin: 0;
   margin-left: auto;
+  position: absolute;
+  top: 5;
+  right: 5;
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease-in; }
@@ -662,28 +652,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   .close-btn:hover, .close-btn:focus {
     border: 2px solid #74b1bf; }
 
-/* ======================================
-  Modal Window Add-On Classes
-========================================= */
-.w-auto {
-  width: auto; }
-
-.w-90prcnt {
-  width: 90%; }
-
-.w-98prcnt {
-  width: 98%; }
-
-.h-80prcnt {
-  height: 80%; }
-
-.h-90prcnt {
-  height: 90%; }
-
-.h-98prcnt {
-  height: 98%; }
-
-.h-auto {
-  height: auto; }
+.inner-wrapper {
+  max-width: 70%; }
 
 /*# sourceMappingURL=styles.css.map */

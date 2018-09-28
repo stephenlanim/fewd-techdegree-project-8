@@ -2,6 +2,17 @@
     Header Styles
    ====================================== */
 
+  .header {
+    margin-top: 1em;
+    padding: 1rem;
+    max-width: 96vw;
+
+    @include mq('med'){
+      @include flexbox($just: space-between);
+      align-items: flex-start;
+    }
+  }
+
    .company,
    .filter {
      @include center;
@@ -35,7 +46,6 @@
    }
 
    #filter {
-     grid-area: search;
      border: $border-line;
      border-radius: 8px;
      font-size: 1.25em;

@@ -45,11 +45,14 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 .modal-content-window {
   background-color: $color-secondary;
   border-radius: 8px;
-  margin: 50px auto 10px auto;
-  padding: 1em;
+  margin: 40px auto 10px auto;
+  // padding: 1em;
+  padding: 0.5em;
+  // padding-bottom: 0.75em;
   // width: 90%;
-  max-height: 85vh;
+  max-height: 90vh;
   overflow: auto;
+  position: relative;
   box-shadow:
     0 5px 8px 0 rgba(0,0,0,0.2),
     0 7px 20px 0 rgba(0,0,0,0.17) ;
@@ -57,7 +60,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 
   @include mq('sm') {
     // width: 70%;
-    max-height: 80vh;
+    max-height: 85vh;
   }
 
   @include mq('med') {
@@ -89,34 +92,34 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 }
 
 /* The container housing the modal-title and close button. */
-.modal-header {
-  @include flexbox($dir:row, $just:space-between);
-  align-items: flex-start;
-
-  @include mq('sm') {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
+// .modal-header {
+//   @include flexbox($dir:row, $just:space-between);
+//   align-items: flex-start;
+//
+//   @include mq('sm') {
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+// }
 
 /* The title in the modal content window. */
-.modal-title {
-  color: $color-secondary;
-  // font-size: 2.0em;
-  margin: 0 !important;
-  width: 100%;
-
-  @include mq('sm') {
-    order: 0;
-    width: 80%;
-  }
-}
+// .modal-title {
+//   color: $color-secondary;
+//   // font-size: 2.0em;
+//   margin: 0 !important;
+//   width: 100%;
+//
+//   @include mq('sm') {
+//     order: 0;
+//     width: 80%;
+//   }
+// }
 
 .view-btn {
   @include button;
   font-size: 1.8em;
-  padding: 0.5em;
+  padding: 0.5em 0.2em;
 
   @include mq('sm') {
     padding: 0.5em;
@@ -138,17 +141,14 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   // transition-timing-function: ease-in-out;
   margin: 0;
   margin-left: auto;
+  position: absolute;
+  top: 5;
+  right: 5;
   // padding: 0 !important;
   // align-self: flex-end;
   // width: 64px;
   // height: 64px;
   @include transition;
-
-  // order: 1;
-
-  @include mq('sm') {
-    // order: 1;
-  }
 
   &:hover,
   &:focus {
@@ -158,34 +158,6 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   }
 }
 
-/* ======================================
-  Modal Window Add-On Classes
-========================================= */
-
-.w-auto {
-  width: auto;
-}
-
-.w-90prcnt {
-  width: 90%;
-}
-
-.w-98prcnt {
-  width: 98%;
-}
-
-.h-80prcnt {
-  height: 80%;
-}
-
-.h-90prcnt {
-  height: 90%;
-}
-
-.h-98prcnt {
-  height: 98%;
-}
-
-.h-auto {
-  height: auto;
+.inner-wrapper {
+  max-width: 70%;
 }

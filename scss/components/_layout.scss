@@ -22,15 +22,6 @@
 
 .header {
   grid-area: header;
-  margin-top: 1em;
-  padding: 1rem;
-  max-width: 96vw;
-  // @include center;
-
-  @include mq('med'){
-    @include flexbox($just: space-between);
-  }
-
 }
 
 .directory {
