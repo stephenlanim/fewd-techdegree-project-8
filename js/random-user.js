@@ -1,24 +1,6 @@
 /* ======================================
     Random staff Generator API
    ====================================== */
-// $(document).ready(function () {
-
-// // Get directory-card targets
-// const $dcImage = $('.directory-card .photo').eq(staff);
-// const $dcName = $('.directory-card .name').index(staff);
-// const $dcEmail = $('.directory-card .email').index(staff);
-// const $dcCity = $('.directory-card .city').index(staff);
-//
-// // Get modal-card targets
-// const $mcImage = $('.modal-card .photo').index(staff);
-// const $mcName = $('.modal-card .name').index(staff);
-// const $mcEmail = $('.modal-card .email').index(staff);
-// const $mcCity = $('.modal-card .city').index(staff);
-// const $mcPhone = $('.modal-card .phone').index(staff);
-// const $mcAddress = $('.modal-card .address').index(staff);
-// const $mcBirthday = $('.modal-card .birthday').index(staff);
-
-// Note: Initializing variables inside of any functions only made them accessible to that function and not any nested functions, despitethe fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
 
 // Get directory-card targets
 let $dcImage;
@@ -47,18 +29,12 @@ let sourceAddress;
 let sourceBirthday;
 let sourceUsername;
 
-// Fetch JSON data for 12 staffs from Random staff API
-fetchData('https://randomuser.me/api/?results=3&nat=us')
-//
-  .then(data => {
+// Note: Initializing variables inside of any functions only made them accessible to that function and not any nested functions, despitethe fact that nested functions should have access to variables from parent functions. The solution was to initialize these variables on a global scope and update their values after the data was fetched.
 
-    // console.log(data);
-    console.log(data.results);
-    // console.log(`${data.results[0].name.first} ${data.results[0].name.last}`);
-    // console.log(capitalize(data.results[0].name.first));
-    // console.log(capitalize(data.results[0].location.street));
-    // console.log(data.results[0].email);
-    // insertRandomEmployees(data);
+// Fetch JSON data for 12 staffs from Random staff API
+fetchData('https://randomuser.me/api/?results=12&nat=us')
+  .then(data => {
+    // Loop through the data results
     data.results.map( staff => {
       // Get properties from staff JSON Object
       currentStaff = data.results.indexOf(staff);
@@ -90,32 +66,19 @@ fetchData('https://randomuser.me/api/?results=3&nat=us')
 
       insertRandomEmployees(staff);
     }); // end of map()
-  }); // end of first then()
+  }) // end of first then()
+; // end of fetchData()
 
-// I need to test if JSON data can be passed down to nested functions, since that will let me know if I need to pass variables into nested functions or not. I'm guessing I don't since I've used "this" or e.target in nested functions before.
 
 // Function to insert random staff data into directory-cards and modal-cards
 function insertRandomEmployees(staff) {
-  // Get properties from JSON Object
-  // let sourceImage = `${data.picture.large}`;
-  // let sourceName = `${data.name.first} ${data.name.last}`;
-  // let sourceEmail = data.email;
-  // let sourceCity = data.location.city;
-  // let sourcePhone = data.phone;
-  // let parsedPhone = `tel:+1${parsePhoneNumber(data.phone)}`;
-  // let sourceAddress = `${data.location.street}, ${data.location.city}, ${data.location.state} ${data.location.postcode}`;
-  // let sourceBirthday = data.email;
 
-  //For each random staff... (may use map())
-  // data.map( staff => {
   insertUsername();
   insertBasicInfo($dcImage, $dcName, $dcEmail, $dcCity);
   insertModalInfo();
 
-
-  // });
-
 }
+
 
 // Function to insert employee username
 function insertUsername() {
@@ -124,18 +87,7 @@ function insertUsername() {
 
 
 // Function for inserting basic employee info
-  // variables to pass in: image, name, email, city
-  // ... I may also need to pass in the object properties from the JSON object, perhaps as "sources".
 function insertBasicInfo (imageTarget, nameTarget,  emailTarget, cityTarget) {
-  // Get properties from JSON Object
-  // let sourceImage = `${data.picture.large}`;
-  // let sourceName = `${data.name.first} ${data.name.last}`;
-  // let sourceEmail = data.email;
-  // let sourceCity = data.location.city;
-  // let sourcePhone = data.phone;
-  // let parsedPhone = `tel:+1${parsePhoneNumber(data.phone)}`;
-  // let sourceAddress = `${data.location.street}, ${data.location.city}, ${data.location.state} ${data.location.postcode}`;
-  // let sourceBirthday = data.email;
 
   // Insert employee image
   imageTarget.attr('src', `${sourceImage}`);
@@ -146,6 +98,7 @@ function insertBasicInfo (imageTarget, nameTarget,  emailTarget, cityTarget) {
   // Insert city
   cityTarget.text(`${sourceCity}`);
 } // end of insertBasicInfo()
+
 
 // Function for populating modal-card
 function insertModalInfo() {
@@ -163,6 +116,7 @@ function insertModalInfo() {
   // Insert birthday
   $mcBirthday.text(`${sourceBirthday}`);
 } // end of insertModalInfo()
+
 
 // Function for parsing phone number
 function parsePhoneNumber(phoneString) {
@@ -184,6 +138,7 @@ function parsePhoneNumber(phoneString) {
   // return new phone number to be added into new array from map()
   return parsedNumber;
 } // end of parsePhoneNumber
+
 
 // Function to rearrange numbers for staff birthday
 function formatBirthday(birthday) {
@@ -233,5 +188,3 @@ function capitalize(dataString) {
 
   } // end of else statement
 }
-
-// });

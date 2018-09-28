@@ -31,8 +31,6 @@
   @include flexbox($dir: column, $wrap:no-wrap);
   align-items: center;
   text-align: center;
-
-  // margin: 0.5em;
   padding: 1em;
   padding-left: 0.75em;
   width: 100%;
@@ -48,7 +46,7 @@
   &:hover,
   &:focus {
     cursor: pointer;
-    background-color: lighten($color-secondary, 5);
+    background-color: lighten($color-secondary, 3);
   }
 
 }
@@ -63,7 +61,6 @@ h2, p, a, address {
   width: 128px;
   height: 128px;
   margin-right: 0.5rem;
-  // display: none;
 }
 
 .d-card-info {
@@ -91,7 +88,6 @@ h2, p, a, address {
   }
 
   @include mq('med') {
-    // margin-top: 120px;
     width: 40%;
   }
 

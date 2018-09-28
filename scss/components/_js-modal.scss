@@ -17,6 +17,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* Regular modal trigger button */
+/* For this project, the entire directory-card <div> was used as a modal-trigger, so there are no styles for the odal trigger as a button. */
  .modal-trigger {
    // @include button;
    // font-size: 1.2rem;
@@ -46,10 +47,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   background-color: $color-secondary;
   border-radius: 8px;
   margin: 40px auto 10px auto;
-  // padding: 1em;
   padding: 0.5em;
-  // padding-bottom: 0.75em;
-  // width: 90%;
   max-height: 90vh;
   overflow: auto;
   position: relative;
@@ -57,20 +55,12 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
     0 5px 8px 0 rgba(0,0,0,0.2),
     0 7px 20px 0 rgba(0,0,0,0.17) ;
 
-
   @include mq('sm') {
-    // width: 70%;
     max-height: 85vh;
   }
 
   @include mq('med') {
-    // margin-top: 120px;
     margin-top: 80px;
-    // width: 60%;
-  }
-
-  @include mq('lg') {
-    // width: 50%;
   }
 
 
@@ -90,31 +80,6 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
     opacity: 1;
     transform: scale(1)}
 }
-
-/* The container housing the modal-title and close button. */
-// .modal-header {
-//   @include flexbox($dir:row, $just:space-between);
-//   align-items: flex-start;
-//
-//   @include mq('sm') {
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-// }
-
-/* The title in the modal content window. */
-// .modal-title {
-//   color: $color-secondary;
-//   // font-size: 2.0em;
-//   margin: 0 !important;
-//   width: 100%;
-//
-//   @include mq('sm') {
-//     order: 0;
-//     width: 80%;
-//   }
-// }
 
 .outer-wrapper {
   @include flexbox($just:space-between);
@@ -147,31 +112,20 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 .close-btn {
   @include button;
 
-  // align-self: flex-end;
   background-color: inherit;
   border-radius: 8px;
   border: $border-line;
   border-color: $color-secondary;
-  // cursor: pointer;
   font-size: 1.4em;
-  // transition-duration: 0.3s;
-  // transition-timing-function: ease-in-out;
-  // margin: 0;
-  // margin-left: auto;
   position: absolute;
   top: 15px;
   right: 15px;
-  z-index: 20;
-  // padding: 0 !important;
-  // align-self: flex-end;
-  // width: 64px;
-  // height: 64px;
+  z-index: 2;
+  width: auto;
   @include transition;
 
   &:hover,
   &:focus {
-    // border-radius: 8px;
     border: $border-line;
-    // color: lighten($text-color, 5);
   }
 }

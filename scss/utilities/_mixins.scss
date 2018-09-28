@@ -77,30 +77,20 @@
 // == Buttons ==
 @mixin button {
   background-color: inherit;
-  // color: $btn-text-color;
   border: $border-line;
   border-color: $color-secondary;
   border-radius: 8px;
   padding: 0.5em 0.75em;
-  // margin: 1em 0 0.5em 0;
   width: fit-content;
   width: -moz-fit-content;
   width: -webkit-fit-content;
-  // text-transform: uppercase;
   @include transition($dur: 0.2s);
 
   &:hover,
   &focus {
     border: $border-line;
-    // background-color: darken($btn-color-default, 8);
-    // background-color: lighten($btn-color-default, 5);
-    // color: $btn-text-color;
     cursor: pointer;
     text-decoration: none;
-  }
-
-  @include mq('sm') {
-    // padding: 0.75em;
   }
 
 }

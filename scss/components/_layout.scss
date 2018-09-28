@@ -4,7 +4,6 @@
 .container {
   background-color: $color-primary;
   min-height: 100vh;
-  // min-width: 100%;
 }
 
 .grid {
@@ -36,7 +35,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    // @include flexbox($wrap: wrap, $just: space-between);
     align-items: stretch;
   }
 }

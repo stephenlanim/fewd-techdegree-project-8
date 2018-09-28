@@ -3,12 +3,12 @@ These files are a part of Stephen Anim's submission for Treehouse's Front-End We
 
 This project involved:
 - CSS grid layout,
+- Fetch API,
 - Random User Generator API,
-- jQuery,
 - AJAX,
-- object-oriented programming,
+- jQuery,
 - JavaScript modal,
-- JavaScript lightbox,
+- JavaScript slideshow/carousel,
 - search filter,
 - modular coding practices,
 - Sass CSS preprocessor,
