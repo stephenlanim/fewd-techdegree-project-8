@@ -640,17 +640,14 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
-  align-self: flex-end;
   background-color: inherit;
   border-radius: 8px;
   border: 2px solid #74b1bf;
   border-color: #ddecef;
   font-size: 1.4em;
-  margin: 0;
-  margin-left: auto;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 15px;
+  right: 15px;
   transition-property: all;
   transition-duration: 0.25s;
   transition-timing-function: ease-in; }

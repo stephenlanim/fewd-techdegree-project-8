@@ -147,7 +147,7 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
 .close-btn {
   @include button;
 
-  align-self: flex-end;
+  // align-self: flex-end;
   background-color: inherit;
   border-radius: 8px;
   border: $border-line;
@@ -156,11 +156,11 @@ Use this document in conjunction with js-modal.js for the scripts that open and 
   font-size: 1.4em;
   // transition-duration: 0.3s;
   // transition-timing-function: ease-in-out;
-  margin: 0;
-  margin-left: auto;
+  // margin: 0;
+  // margin-left: auto;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 15px;
+  right: 15px;
   // padding: 0 !important;
   // align-self: flex-end;
   // width: 64px;
