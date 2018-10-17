@@ -28,7 +28,7 @@
   background-color: $color-secondary;
   border-radius: 8px;
   border: $border-line;
-  @include flexbox($dir: column, $wrap:no-wrap);
+  @include flexbox($dir: column, $wrap:nowrap);
   align-items: center;
   text-align: center;
   padding: 1em;
